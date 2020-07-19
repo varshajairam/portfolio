@@ -137,7 +137,7 @@ export default class MenuExamplePointing extends Component {
             visible={visible}>
             <div>
               {activeItem === 'about' && <Container>
-              <Header as='h2' attached='top' color='purple'><FontAwesomeIcon icon={faAddressCard} style={{ marginRight: '10px' }} />
+              <Header as='h1' attached='top' color='purple'><FontAwesomeIcon icon={faAddressCard} style={{ marginRight: '10px' }} />
                   Varsha Jairam
                 </Header>
                 <Segment attached>
@@ -164,7 +164,7 @@ export default class MenuExamplePointing extends Component {
               </Container>}
               {activeItem === 'work experience' &&
                 <Container>
-                  <Header as='h2' color='purple'><FontAwesomeIcon icon={faCode} style={{ marginRight: '10px' }} />
+                  <Header as='h1' color='purple'><FontAwesomeIcon icon={faCode} style={{ marginRight: '10px' }} />
                     Infosys
               {/* <Image centered size = 'massive' src='/infosys.png' /> */}
                   </Header>
@@ -173,14 +173,14 @@ export default class MenuExamplePointing extends Component {
             </div></Transition>
           {activeItem === 'projects' &&
             <Container>
-              <Header as='h2' color='purple'><FontAwesomeIcon icon={faLaptopCode} style={{ marginRight: '10px' }} />
-                Cannot pick a favorite!
+              <Header as='h1' color='purple'><FontAwesomeIcon icon={faLaptopCode} style={{ marginRight: '10px' }} />
+                Cannot pick a favorite
             </Header>
               <Project></Project>
             </Container>}
           {activeItem === 'contact' &&
             <Container>
-              <Header as='h2' color='purple'><FontAwesomeIcon icon={faAddressBook} style={{ marginRight: '10px' }} />
+              <Header as='h1' color='purple'><FontAwesomeIcon icon={faAddressBook} style={{ marginRight: '10px' }} />
                 Say hello
             </Header>
               
