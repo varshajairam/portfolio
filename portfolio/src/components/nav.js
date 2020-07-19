@@ -3,7 +3,8 @@ import { Menu, Segment, Image, Container, Header, Transition, Accordion, Grid, R
 import Project from './projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faLinkedin, faMedium, faBitbucket } from '@fortawesome/free-brands-svg-icons';
-import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import { faCopyright, faAddressBook, faAddressCard } from '@fortawesome/free-regular-svg-icons';
+import { faLaptopCode, faCode } from '@fortawesome/free-solid-svg-icons';
 
 export default class MenuExamplePointing extends Component {
 
@@ -136,7 +137,7 @@ export default class MenuExamplePointing extends Component {
             visible={visible}>
             <div>
               {activeItem === 'about' && <Container>
-                <Header as='h2' attached='top' color='purple' >
+              <Header as='h2' attached='top' color='purple'><FontAwesomeIcon icon={faAddressCard} style={{ marginRight: '10px' }} />
                   Varsha Jairam
                 </Header>
                 <Segment attached>
@@ -163,7 +164,7 @@ export default class MenuExamplePointing extends Component {
               </Container>}
               {activeItem === 'work experience' &&
                 <Container>
-                  <Header as='h2' color='purple'>
+                  <Header as='h2' color='purple'><FontAwesomeIcon icon={faCode} style={{ marginRight: '10px' }} />
                     Infosys
               {/* <Image centered size = 'massive' src='/infosys.png' /> */}
                   </Header>
@@ -172,19 +173,20 @@ export default class MenuExamplePointing extends Component {
             </div></Transition>
           {activeItem === 'projects' &&
             <Container>
-              <Header as='h2' color='purple'>
+              <Header as='h2' color='purple'><FontAwesomeIcon icon={faLaptopCode} style={{ marginRight: '10px' }} />
                 Cannot pick a favorite!
             </Header>
               <Project></Project>
             </Container>}
           {activeItem === 'contact' &&
             <Container>
-              <Header as='h2' color='purple'>
-                Say hello!
+              <Header as='h2' color='purple'><FontAwesomeIcon icon={faAddressBook} style={{ marginRight: '10px' }} />
+                Say hello
             </Header>
-              <Header as='h5'>
-                My email is varshaa.jairam@gmail.com. My social media links are down below. Let's get in touch!
-            </Header>
+              
+              <Header as='h3' color = 'grey'> Email me here: varshaa.jairam@gmail.com</Header>
+              <Header as='h3' color = 'grey'>My social media links are down below. Let's get in touch!</Header>
+            
             </Container>}
         </div>
         <Segment inverted vertical>
