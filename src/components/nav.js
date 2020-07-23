@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Segment, Image, Container, Header, Transition, Accordion, Grid, Responsive } from 'semantic-ui-react';
+import { Menu, Segment, Image, Container, Header, Transition, Accordion, Grid, Responsive, Card } from 'semantic-ui-react';
 import Project from './projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faLinkedin, faMedium, faBitbucket } from '@fortawesome/free-brands-svg-icons';
@@ -17,84 +17,206 @@ export default class MenuExamplePointing extends Component {
     this.toggleVisibility();
   }
 
+  taItems = [
+    {
+      header: 'Jan - Feb 2019',
+      description:
+        'Developed new tabs and pages for the application and added enhancements to Job, Quote and Contract functionalities.',
+      meta: 'Front-end developer',
+      color: 'purple'
+    },
+    {
+      header: 'Mar - Apr 2019',
+      description:
+        'Scheduled build triggering and source code management, along with continuous deployment to the server.',
+      meta: 'Microsoft Team Foundation Server, Visual Studio Team Services, Serena',
+      color: 'purple'
+    },
+    {
+      header: 'May 2019',
+      description:
+        'Fixed critical bugs regularly, which gave me a deeper understanding of the code as well as end-user preferences.',
+      meta: 'Angular 2, HTML, CSS, Flux',
+      color: 'purple'
+    },
+  ];
+
+  sseItems = [
+    {
+      header: 'May 2017',
+      description:
+        'Worked on a web application to allow field technicians to plan surface or drilling jobs, add materials and assign personnel to a particular job and invoice all billable resources to the customer. The application aimed to reduce paperwork and take all operations online.',
+      meta: 'Front-end developer',
+      color: 'purple'
+    },
+    {
+      header: 'Jun - Aug 2017',
+      description:
+        'Developed create and update functionalities for a job in line with mock screens. Created data models for binding the response from .NET APIs to the respective template components.',
+      meta: 'Angular 2, Typescript, Flux, HTML 5 and CSS 3',
+      color: 'purple'
+    },
+    {
+      header: 'Sep - Nov 2017',
+      description:
+        'Developed create, update and dashboard functionalities for quotation and contract for invoicing purposes.',
+      meta: 'JQuery, jqxTreeGrid',
+      color: 'purple'
+    },
+    {
+      header: 'Dec - Feb 2018',
+      description:
+        'Developed filters and search functionality for the Job Dashboard. Grouped all created jobs in a tabular format and made the columns sortable based on several job parameters such as Job ID, location, Start Date, End Date.',
+      meta: 'Schlumberger (Bangalore)',
+      color: 'purple'
+    },
+  ];
+
+  seItems = [
+    {
+      header: 'Apr 2016 - Apr 2017',
+      description:
+        'Worked on a B2B web application for AT&T for users to purchase products and initiate maintenance with minimal assistance from technicians. It was based on the Agile development model spanning four iterations of about 3 weeks each.',
+      meta: 'Front-end developer',
+      color: 'purple'
+    },
+    {
+      header: 'May - Jul 2016',
+      description:
+        'Set up mock data with ICD-t and implemented search by asset ID and alias for inventory products according to redlines and comps, made API calls to the relevant Java services, and bound the response to UI controls. ' +
+        'Used Adobe Web Analytics to study user actions and patterns, tag pages, links and business-significant actions, and collect usage statistics for analysis.',
+      meta: 'AngularJS, HTML 5, CSS 3',
+      color: 'purple'
+    },
+    {
+      header: 'Aug - Sep 2016',
+      description:
+        'Made web pages accessibility compliant. Enforced keyboard accessibility for screen readers with accurate audio description for each user action and validation of color contrast ratios for components.',
+      meta: 'Corporate Accessibility Technology Office (CATO), NVDA (Google Chrome), WAT (Internet Explorer), FireEyes (Firefox)',
+      color: 'purple'
+    },
+    {
+      header: 'Oct - Dec 2016',
+      description:
+        'Enhanced ticket creation for product issues, and implemented pagination for lexicon logs. The part of the page I designed collected contact details of the user associated with a ticket. ',
+      meta: 'AngularJS, HTML 5, CSS 3',
+      color: 'purple'
+    },
+    {
+      header: 'Jan - May 2017',
+      description:
+        'Resolved defects with quick turnaround time as part of IST and UAT for multiple releases.',
+      meta: 'Integrated Systems Testing, User Acceptance Testing',
+      color: 'purple'
+    },
+  ];
+
+  trItems = [
+    {
+      header: 'Nov - Jan 2015',
+      description:
+        'Built a banking application with CRUD operations, with RDBMS connectivity and stored procedures.',
+      meta: 'Python, Oracle',
+      color: 'purple'
+    },
+    {
+      header: 'Feb - Mar 2016',
+      description:
+        'Developed a travel-based n-tier enterprise application comprising a single-page application user interface, Java APIs and JUnit.',
+      meta: 'Java, JDBC, JPA API, Hibernate, HTML 5, CSS 3, JavaScript, CSS Bootstrap and AngularJS, JUnit',
+      color: 'purple'
+    },
+    {
+      header: 'Apr 2016',
+      description:
+        'Created a ticket servicing tool to handle live requests raised within a time limit, including build automation, CI/CD and source code control using GIT and SVN.',
+      meta: 'Java, Apache Maven, Jenkins',
+      color: 'purple'
+    },
+  ];
+
   toggleVisibility = () =>
     this.setState((prevState) => ({ visible: !prevState.visible }));
 
   render() {
     const { activeItem, animation, duration, visible } = this.state;
 
-    const panels = [
+    const panels = [      
       {
-        key: 'trainee',
-        title: 'Systems Engineer Trainee (2015 - 2016)',
+        key: 'ta',
+        title: 'Technology Analyst - Schlumberger (Bangalore)',
         content: {
           content: (
-            <div>
-              <p>
-                Developed a Java Enterprise Application using JDBC, JPA API, and Hibernate ORM framework for database operations, HTML 5, CSS 3, JavaScript, CSS Bootstrap and AngularJS with a Model – View – Controller design pattern for the user interface, and JUnit for Java unit test cases.
-                Built a ticket servicing tool (for live requests raised) within a time limit, with the configuration of Apache Maven for build automation, GIT and SVN repositories for source code control and the Jenkins framework for continuous integration and deployment.
-                Also developed a Python-based banking application, with RDBMS connectivity and stored procedures.
-              </p>
-            </div>
-          )
+            <Card.Group centered items={this.taItems} />
+            // <div>
+            //   <p>
+            //     I developed new tabs and pages for the application and added enhancements to Job, Quote and Contract functionalities. We used Microsoft Team Foundation Server and Visual Studio Team Services for source code management and scheduled build triggering, along with Serena for continuous deployment to the server. I also fixed critical bugs regularly, which gave me a deeper understanding of the code as well as end-user preferences.
+            //   </p>
+            // </div>
+          ),
+        },
+      },
+      {
+        key: 'sse',
+        title: 'Senior Systems Engineer - Schlumberger (Bangalore)',
+        content: {
+          content: (
+            // <div>
+            //   <p>
+            //     Developed a web application for Schlumberger, to allow field technicians to plan surface or drilling jobs, add materials and assign personnel to a particular job and invoice all billable resources to the customer. The application aimed to reduce paperwork and take all operations online.
+            //   </p>
+            //   <p>
+            //     The first six months followed the Waterfall model of development with three releases or milestones. My work in the first milestone centered on creating and updating a job by adding the necessary UI components and functionalities with Angular 2, Typescript, HTML 5 and CSS 3 in line with mock screens. Flux architecture was used in the client-side code to maintain a uniform data flow. I had to also create data models for binding the response from .NET APIs to the respective template components.
+            //   </p>
+            //   <p>
+            //     In the second milestone, I worked on creating and updating a quotation and contract for invoicing purposes, and used JQuery and jqxTreeGrid along with the aforementioned technologies in order to display tabular details on the screen.
+            //   </p>
+            //   <p>
+            //     In the third milestone, I worked on filters and search functionality for the Job Dashboard and grouped all the created jobs in a tabular format. I also made the columns sortable based on several job parameters such as Job ID, location, Start Date, End Date etc.
+            //   </p>
+            // </div>
+            <Card.Group centered items={this.sseItems} />
+          ),
         },
       },
       {
         key: 'se',
-        title: 'Systems Engineer (2016 - 2017)',
+        title: 'Systems Engineer - AT&T (Chennai)',
         content: {
           content: (
-            <div>
-              <p>
-                Developed a Business-to-Business web application for AT&T, that served as a DIY application where users could select and purchase products, as well as initiate maintenance by raising tickets or alarms, with minimal assistance from technicians.
-                This was based on the Agile development model, spanning four iterations of about 3 weeks each, followed by a month of intensive testing and speedy defect fixes preceding the release of each Minimum Viable Product. I was part of three releases.
-              </p>
-              <p>
-                In the first release, I contributed to front-end development using AngularJS, HTML 5 and CSS 3. This included enhancing search operations for products in the inventory by designing web pages according to redlines and comps, making API calls to the relevant Java services, and binding the response to the UI controls.
-                I then used Adobe Web Analytics to study user actions and patterns, tag pages, links and business-significant actions that were frequently visited by the user, and collect usage statistics for analysis.
-                I also had to make the web pages compliant with screen readers in accordance with Corporate Accessibility Technology Office (CATO) rules to aid the visually challenged and the color-blind. I had to ensure that the whole page was keyboard accessible with accurate audio description provided for each user action, and that it followed color contrast ratios for each component on the screen. The tools used for this were NVDA (Google Chrome), WAT (Internet Explorer) and FireEyes (Firefox).
-              </p>
-              <p>
-                In the second release, I worked on the process of creating a ticket for a user in case of issues with the product. The part of the page I designed collected contact details of the user associated with a ticket.
-                In the third release, I displayed ticket logs and implemented pagination. I also took part in defect resolution with quick turnaround time as part of Integrated Systems Testing and User Acceptance Testing for multiple releases.
-              </p>
-            </div>
+            // <div>
+            //   <p>
+            //     Developed a Business-to-Business web application for AT&T, that served as a DIY application where users could select and purchase products, as well as initiate maintenance by raising tickets or alarms, with minimal assistance from technicians.
+            //     This was based on the Agile development model, spanning four iterations of about 3 weeks each, followed by a month of intensive testing and speedy defect fixes preceding the release of each Minimum Viable Product. I was part of three releases.
+            //   </p>
+            //   <p>
+            //     In the first release, I contributed to front-end development using AngularJS, HTML 5 and CSS 3. This included enhancing search operations for products in the inventory by designing web pages according to redlines and comps, making API calls to the relevant Java services, and binding the response to the UI controls.
+            //     I then used Adobe Web Analytics to study user actions and patterns, tag pages, links and business-significant actions that were frequently visited by the user, and collect usage statistics for analysis.
+            //     I also had to make the web pages compliant with screen readers in accordance with Corporate Accessibility Technology Office (CATO) rules to aid the visually challenged and the color-blind. I had to ensure that the whole page was keyboard accessible with accurate audio description provided for each user action, and that it followed color contrast ratios for each component on the screen. The tools used for this were NVDA (Google Chrome), WAT (Internet Explorer) and FireEyes (Firefox).
+            //   </p>
+            //   <p>
+            //     In the second release, I worked on the process of creating a ticket for a user in case of issues with the product. The part of the page I designed collected contact details of the user associated with a ticket.
+            //     In the third release, I displayed ticket logs and implemented pagination. I also took part in defect resolution with quick turnaround time as part of Integrated Systems Testing and User Acceptance Testing for multiple releases.
+            //   </p>
+            // </div>
+            <Card.Group centered items={this.seItems} />
           )
         }
       },
       {
-        key: 'sse',
-        title: 'Senior Systems Engineer (2018)',
+        key: 'trainee',
+        title: 'Systems Engineer Trainee (Mysore)',
         content: {
           content: (
-            <div>
-              <p>
-                Developed a web application for Schlumberger, to allow field technicians to plan surface or drilling jobs, add materials and assign personnel to a particular job and invoice all billable resources to the customer. The application aimed to reduce paperwork and take all operations online.
-              </p>
-              <p>
-                The first six months followed the Waterfall model of development with three releases or milestones. My work in the first milestone centered on creating and updating a job by adding the necessary UI components and functionalities with Angular 2, Typescript, HTML 5 and CSS 3 in line with mock screens. Flux architecture was used in the client-side code to maintain a uniform data flow. I had to also create data models for binding the response from .NET APIs to the respective template components.
-              </p>
-              <p>
-                In the second milestone, I worked on creating and updating a quotation and contract for invoicing purposes, and used JQuery and jqxTreeGrid along with the aforementioned technologies in order to display tabular details on the screen.
-              </p>
-              <p>
-                In the third milestone, I worked on filters and search functionality for the Job Dashboard and grouped all the created jobs in a tabular format. I also made the columns sortable based on several job parameters such as Job ID, location, Start Date, End Date etc.
-              </p>
-            </div>
-          ),
-        },
-      },
-      {
-        key: 'ta',
-        title: 'Technology Analyst (2019)',
-        content: {
-          content: (
-            <div>
-              <p>
-                I developed new tabs and pages for the application and added enhancements to Job, Quote and Contract functionalities. We used Microsoft Team Foundation Server and Visual Studio Team Services for source code management and scheduled build triggering, along with Serena for continuous deployment to the server. I also fixed critical bugs regularly, which gave me a deeper understanding of the code as well as end-user preferences.
-              </p>
-            </div>
-          ),
+            // <div>
+            //   <p>
+            //     Developed a Java Enterprise Application using JDBC, JPA API, and Hibernate ORM framework for database operations, HTML 5, CSS 3, JavaScript, CSS Bootstrap and AngularJS with a Model – View – Controller design pattern for the user interface, and JUnit for Java unit test cases.
+            //     Built a ticket servicing tool (for live requests raised) within a time limit, with the configuration of Apache Maven for build automation, GIT and SVN repositories for source code control and the Jenkins framework for continuous integration and deployment.
+            //     Also developed a Python-based banking application, with RDBMS connectivity and stored procedures.
+            //   </p>
+            // </div>
+            <Card.Group centered items={this.trItems} />
+          )
         },
       },
     ];
