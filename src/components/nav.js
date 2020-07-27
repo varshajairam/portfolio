@@ -19,118 +19,118 @@ export default class MenuExamplePointing extends Component {
 
   taItems = [
     {
-      header: 'Jan - Feb 2019',
+      meta: 'Jan 2019 - Feb 2019',
       description:
         'Developed new tabs and pages for the application and added enhancements to Job, Quote and Contract functionalities.',
-      meta: 'Front-end developer',
+      header: 'Front-end developer',
       color: 'purple'
     },
     {
-      header: 'Mar - Apr 2019',
+      meta: 'Mar 2019 - Apr 2019',
       description:
         'Scheduled build triggering and source code management, along with continuous deployment to the server.',
-      meta: 'Microsoft Team Foundation Server, Visual Studio Team Services, Serena',
+      header: 'Microsoft Team Foundation Server, Visual Studio Team Services, Serena',
       color: 'purple'
     },
     {
-      header: 'May 2019',
+      meta: 'May 2019',
       description:
         'Fixed critical bugs regularly, which gave me a deeper understanding of the code as well as end-user preferences.',
-      meta: 'Angular 2, HTML, CSS, Flux',
+      header: 'Angular 2, HTML, CSS, Flux',
       color: 'purple'
     },
   ];
 
   sseItems = [
     {
-      header: 'May 2017',
+      meta: 'May 2017',
       description:
         'Worked on a web application to allow field technicians to plan surface or drilling jobs, add materials and assign personnel to a particular job and invoice all billable resources to the customer. The application aimed to reduce paperwork and take all operations online.',
-      meta: 'Front-end developer',
+      header: 'Front-end developer',
       color: 'purple'
     },
     {
-      header: 'Jun - Aug 2017',
+      meta: 'Jun 2017 - Aug 2017',
       description:
         'Developed create and update functionalities for a job in line with mock screens. Created data models for binding the response from .NET APIs to the respective template components.',
-      meta: 'Angular 2, Typescript, Flux, HTML 5 and CSS 3',
+      header: 'Angular 2, Typescript, Flux, HTML 5 and CSS 3',
       color: 'purple'
     },
     {
-      header: 'Sep - Nov 2017',
+      meta: 'Sep 2017 - Nov 2017',
       description:
         'Developed create, update and dashboard functionalities for quotation and contract for invoicing purposes.',
-      meta: 'JQuery, jqxTreeGrid',
+      header: 'JQuery, jqxTreeGrid',
       color: 'purple'
     },
     {
-      header: 'Dec - Feb 2018',
+      meta: 'Dec 2017 - Feb 2018',
       description:
         'Developed filters and search functionality for the Job Dashboard. Grouped all created jobs in a tabular format and made the columns sortable based on several job parameters such as Job ID, location, Start Date, End Date.',
-      meta: 'Schlumberger (Bangalore)',
+      header: 'Angular 2, Typescript, Flux, HTML 5 and CSS 3',
       color: 'purple'
     },
   ];
 
   seItems = [
     {
-      header: 'Apr 2016 - Apr 2017',
+      meta: 'Apr 2016',
       description:
         'Worked on a B2B web application for AT&T for users to purchase products and initiate maintenance with minimal assistance from technicians. It was based on the Agile development model spanning four iterations of about 3 weeks each.',
-      meta: 'Front-end developer',
+      header: 'Front-end developer',
       color: 'purple'
     },
     {
-      header: 'May - Jul 2016',
+      meta: 'May 2016 - Jul 2016',
       description:
         'Set up mock data with ICD-t and implemented search by asset ID and alias for inventory products according to redlines and comps, made API calls to the relevant Java services, and bound the response to UI controls. ' +
         'Used Adobe Web Analytics to study user actions and patterns, tag pages, links and business-significant actions, and collect usage statistics for analysis.',
-      meta: 'AngularJS, HTML 5, CSS 3',
+      header: 'AngularJS, HTML 5, CSS 3',
       color: 'purple'
     },
     {
-      header: 'Aug - Sep 2016',
+      meta: 'Aug 2016 - Sep 2016',
       description:
         'Made web pages accessibility compliant. Enforced keyboard accessibility for screen readers with accurate audio description for each user action and validation of color contrast ratios for components.',
-      meta: 'Corporate Accessibility Technology Office (CATO), NVDA (Google Chrome), WAT (Internet Explorer), FireEyes (Firefox)',
+      header: 'Corporate Accessibility Technology Office (CATO), NVDA (Google Chrome), WAT (Internet Explorer), FireEyes (Firefox)',
       color: 'purple'
     },
     {
-      header: 'Oct - Dec 2016',
+      meta: 'Oct 2016 - Dec 2016',
       description:
         'Enhanced ticket creation for product issues, and implemented pagination for lexicon logs. The part of the page I designed collected contact details of the user associated with a ticket. ',
-      meta: 'AngularJS, HTML 5, CSS 3',
+      header: 'AngularJS, HTML 5, CSS 3',
       color: 'purple'
     },
     {
-      header: 'Jan - May 2017',
+      meta: 'Jan 2017 - May 2017',
       description:
         'Resolved defects with quick turnaround time as part of IST and UAT for multiple releases.',
-      meta: 'Integrated Systems Testing, User Acceptance Testing',
+      header: 'Integrated Systems Testing, User Acceptance Testing',
       color: 'purple'
     },
   ];
 
   trItems = [
     {
-      header: 'Nov - Jan 2015',
+      meta: 'Nov 2015 - Jan 2015',
       description:
         'Built a banking application with CRUD operations, with RDBMS connectivity and stored procedures.',
-      meta: 'Python, Oracle',
+      header: 'Python, Oracle',
       color: 'purple'
     },
     {
-      header: 'Feb - Mar 2016',
+      meta: 'Feb 2016 - Mar 2016',
       description:
         'Developed a travel-based n-tier enterprise application comprising a single-page application user interface, Java APIs and JUnit.',
-      meta: 'Java, JDBC, JPA API, Hibernate, HTML 5, CSS 3, JavaScript, CSS Bootstrap and AngularJS, JUnit',
+      header: 'Java, JDBC, JPA API, Hibernate, HTML 5, CSS 3, JavaScript, CSS Bootstrap and AngularJS, JUnit',
       color: 'purple'
     },
     {
-      header: 'Apr 2016',
+      meta: 'Apr 2016',
       description:
         'Created a ticket servicing tool to handle live requests raised within a time limit, including build automation, CI/CD and source code control using GIT and SVN.',
-      meta: 'Java, Apache Maven, Jenkins',
+      header: 'Java, Apache Maven, Jenkins',
       color: 'purple'
     },
   ];
